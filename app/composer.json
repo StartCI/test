@@ -16,7 +16,7 @@
     "require-dev": {
         "fakerphp/faker": "^1.9",
         "mikey179/vfsstream": "^1.6",
-        "phpunit/phpunit": "^10.5.16"
+        "pestphp/pest": "^3.5"
     },
     "autoload": {
         "psr-4": {
@@ -35,7 +35,10 @@
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     },
     "scripts": {
         "test": "phpunit"
