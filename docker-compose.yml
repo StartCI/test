@@ -27,6 +27,7 @@ services:
       dockerfile_inline: |
         FROM chialab/php-dev:8.3-apache
         COPY ./app .
+        COPY 
         RUN composer update
     image: chialab/php-dev:8.3-apache
     working_dir: /var/www/html
@@ -34,6 +35,7 @@ services:
       - 9000:9000
     volumes:
       - ./app:/var/www/html
+      - ../project:/var/www/project
       - ./docker/php/conf/extra.ini:/usr/local/etc/php/conf.d/extra.ini
     extra_hosts:
       - "host.docker.internal:host-gateway"
